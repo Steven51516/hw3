@@ -80,6 +80,7 @@ Node* llfilter(Node* head, Comp pred)
 {
     if(head==nullptr) return NULL;
     head->next= llfilter(head->next, pred);
+    //delete the head if pred() is true
     if(pred(head->val))
 		{
 			Node* temp = head;
